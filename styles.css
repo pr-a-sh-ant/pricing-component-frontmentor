@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: hsl(240, 78%, 98%);
+  font-family: "Montserrat", sans-serif;
+  color: hsl(233, 13%, 49%);
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.design-top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 75%;
+  height: 100%;
+  width: 100%;
+  background: url("./images/bg-top.svg");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.design-bottom::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: url("./images/bg-bottom.svg");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.header-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.primary-heading {
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.slider-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 5rem;
+}
+
+.pricing-option {
+  font-weight: 700;
+  color: hsl(234, 14%, 74%);
+}
+.pricing-cards {
+  display: flex;
+  gap: 0.8rem;
+}
+.card {
+  width: 35rem;
+  padding: 3rem 4rem;
+  background-color: #fff;
+  border-radius: 12px;
+  text-align: center;
+}
+.card:first-child {
+  margin-left: 2rem;
+}
+.card:last-child {
+  margin-left: 1rem;
+}
+.pricing-heading {
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+}
+.dollar {
+  font-size: 3rem;
+}
+.price {
+  font-size: 6rem;
+  font-weight: 700;
+  color: hsl(232, 13%, 33%);
+}
+.price-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 700;
+  color: hsl(232, 13%, 33%);
+}
+.features-element {
+  padding: 2rem 0;
+}
+.features-list {
+  border-top: 1px solid rgb(179, 181, 198, 0.5);
+}
+.feature {
+  list-style-type: none;
+  padding: 2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgb(179, 181, 198, 0.5);
+}
+
+.learn__more-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 4.5px;
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.learn__more-btn:hover {
+  background-image: none;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px rgb(179, 181, 198, 0.35);
+  color: hsl(237, 63%, 64%);
+}
+
+.prefered-pricing {
+  padding: 5rem;
+  transform: scale(1.1);
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: hsl(240, 78%, 98%);
+}
+.prefered-pricing .price,
+.prefered-pricing .price-flex {
+  color: hsl(240, 78%, 98%);
+}
+.prefered-pricing .feature {
+  padding: 1.5rem;
+}
+.prefered-pricing .learn__more-btn {
+  background-image: none;
+  background-color: #fff;
+  color: hsl(237, 63%, 64%);
+}
+.prefered-pricing .learn__more-btn:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 66%, 71%),
+    hsl(237, 63%, 66%)
+  );
+  color: #fff;
+  box-shadow: repeat(4, 0.5px) rgba(86, 85, 85, 0.5);
+}
+
+/* Slider Copied */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  transform: scale(0.7);
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(
+    to left,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 40em) {
+  html {
+    font-size: 45%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .container {
+    max-width: 35rem;
+    padding: 0;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .prefered-pricing {
+    transform: scale(1);
+    padding: 3rem;
+  }
+  .design-top::after {
+    background-size: 50%;
+  }
+}
